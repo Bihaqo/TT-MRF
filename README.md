@@ -28,36 +28,36 @@ Model format
 
 We use custom graphical model instance format. You can build problems like this:
 ``` Matlab
-	% Build 5x4 grid spin glass model with temperature = 2.
-	Model = generate_spin_glass_model(5, 4, 2);
+    % Build 5x4 grid spin glass model with temperature = 2.
+    Model = generate_spin_glass_model(5, 4, 2);
 
-	% Load model in OpenGM format.
-	Model = load_opengm_model('matching/matching0.h5');
+    % Load model in OpenGM format.
+    Model = load_opengm_model('matching/matching0.h5');
 
-	% Load model in uai format.
-	Model = load_uai_model('RBM.uai');
+    % Load model in uai format.
+    Model = load_uai_model('RBM.uai');
 ```
 
 Format details:
 ``` Matlab
-	Model.libdaiFactors     [Cell array] factors of the model in the LibDAI format
-	Model.numNodes          [Number] number of Model variables
-	Model.modeSizes         [Vector 1 x d] sizes of variables (e.g. x_1 is from {1, ..., modeSizes(1)})
-	Model.description       [String] text description
-	Model.type              [String] Type: 'Spin glass', 'OpenGM' or 'UAI'
+    Model.libdaiFactors     [Cell array] factors of the model in the LibDAI format
+    Model.numNodes          [Number] number of Model variables
+    Model.modeSizes         [Vector 1 x d] sizes of variables (e.g. x_1 is from {1, ..., modeSizes(1)})
+    Model.description       [String] text description
+    Model.type              [String] Type: 'Spin glass', 'OpenGM' or 'UAI'
 
-	% Problem specific, spin glass
-	Model.grid_n            [Number] vertical size of spin glass model grid
-	Model.grid_m            [Number] horizontal size of spin glass model grid
-	Model.temperature       [Number]
-	Model.unaryWeights      [Matrix n x m]
-	Model.unaryType         [String] how unary weights were specified during construction: 'number' if all unary weights equals to one number;
+    % Problem specific, spin glass
+    Model.grid_n            [Number] vertical size of spin glass model grid
+    Model.grid_m            [Number] horizontal size of spin glass model grid
+    Model.temperature       [Number]
+    Model.unaryWeights      [Matrix n x m]
+    Model.unaryType         [String] how unary weights were specified during construction: 'number' if all unary weights equals to one number;
                                   'matrix' user matrix with unary weights was specified;
                                   'rand' if weights were generated from uniform distribution
-	Model.unaryDistr        [Vector 1 x 2] unary wights uniform distribution support (e.g. [-1, 1] means that weights are from U(-1, 1))
-	Model.edgeWeights       [Vector numEdges x 1] all pairwise weights
-	Model.edgeType          [String] 'number' or 'rand', see details in unryType description
-	Model.edgesDistr        [Vector 1 x 2] pairwise weight uniform distribution support
+    Model.unaryDistr        [Vector 1 x 2] unary wights uniform distribution support (e.g. [-1, 1] means that weights are from U(-1, 1))
+    Model.edgeWeights       [Vector numEdges x 1] all pairwise weights
+    Model.edgeType          [String] 'number' or 'rand', see details in unryType description
+    Model.edgesDistr        [Vector 1 x 2] pairwise weight uniform distribution support
 ```
 
 

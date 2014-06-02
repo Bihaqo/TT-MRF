@@ -1,6 +1,6 @@
 function factors = tt_factors(Model)
     % Find TT representation of model factors.
-	% 
+    % 
 
     factors = cell(Model.numFactors, 1);
     for iFactor = 1 : Model.numFactors
