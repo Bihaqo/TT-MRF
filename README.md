@@ -31,8 +31,8 @@ We use custom graphical model instance format. You can build problems like this:
 	% Build 5x4 grid spin glass model with temperature = 2.
 	Model = generate_spin_glass_model(5, 4, 2);
 
-  % Load model in OpenGM format.
-  Model = load_opengm_model('matching/matching0.h5');
+	% Load model in OpenGM format.
+	Model = load_opengm_model('matching/matching0.h5');
 
 	% Load model in uai format.
 	Model = load_uai_model('RBM.uai');
@@ -63,7 +63,6 @@ Format details:
 
 Example code
 ==============
-Generate spin glass model, compute log partition function with Tensor Train approach and compare with 
 ``` Matlab
   % Build 5x4 grid spin glass model with temperature = 2 and pairwise weights generated from uniform distribution on [0, 1].
   Model = generate_spin_glass_model(5, 4, 2, 'J', 'rand', 'J_distr', [0, 1]);
