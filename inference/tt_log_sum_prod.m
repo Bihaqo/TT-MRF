@@ -9,7 +9,6 @@ function [logSum, logAbsDiffBound] = tt_log_sum_prod(factorArray, roundingPrecis
     %       o mv     -- ['exact'] or 'amen'. Matrix by vector multiplication method.
     %                                'exact' -- multiply exactly and then apply tt_rounding
     %                                'amen' -- use amen_mv method
-    %       o rmax   -- [inf] maximum rank for intermediate tensors.
     %       o verb   -- [1] verbosity level, 0-silent, 1-full info.
     % 
 
