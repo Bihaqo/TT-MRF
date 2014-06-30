@@ -32,10 +32,10 @@ We use custom graphical model instance format. You can build problems like this:
 Model = generate_spin_glass_model(5, 4, 2);
 
 % Load model in OpenGM format.
-Model = load_opengm_model('matching/matching0.h5');
+Model = load_opengm_model('examples/geosurf.h5');
 
 % Load model in uai format.
-Model = load_uai_model('RBM.uai');
+Model = load_uai_model('examples/spinglass.uai');
 ```
 
 Format details:
