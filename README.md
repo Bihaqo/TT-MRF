@@ -1,7 +1,21 @@
 TT-MRF
 ======
 
-TT-MRF is a library for Markov random field inference with Tensor Train decomposition approach.
+TT-MRF is a library for Markov random field inference with Tensor Train decomposition approach. The code is published in support to the following paper:
+
+Putting MRFs on a Tensor Train  
+Alexander Novikov, Anton Rodomanov, Anton Osokin, Dmitry Vetrov; In _Proceedings of The 31st International Conference on Machine Learning_ (ICML-2014) [[paper](https://www.dropbox.com/s/d479j6zocine232/Paper.pdf)] [[suppl.](https://www.dropbox.com/s/ozbnccf0rxlzu9m/Supplementary.pdf)] [[poster](https://www.dropbox.com/s/49ed3vqrvtxbq0v/Poster.pdf)].
+
+Please cite it if you write scientific paper using this code.  
+In BiBTeX format:
+```latex
+@article{novikov14tt,
+  author    = {Novikov, Alexander and Rodomanov, Anton and Osokin, Anton and Vetrov, Dmitry},
+  title     = {Putting {MRF}s on a {T}ensor {T}rain},
+  journal   = {Proceedings of The 31st International Conference on Machine Learning},
+  year      = {2014},
+}
+```
 
 Install
 =======
