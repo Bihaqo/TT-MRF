@@ -34,7 +34,7 @@ function plot_comparison(temperatureArray, logZ_TT, logZ_JT, logZ_BP, logZ_MF, l
     'TickLength',[0.02 0.02],...
     'Position',[0.095360824742268 0.138888888888889 0.868556701030928 0.845238095238095],...
     'FontName','Times New Roman');
-	% save_figure(h, file_name);
+	save_figure(h, 'Error comparison');
 end
 
 
