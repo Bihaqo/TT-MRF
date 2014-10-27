@@ -18,8 +18,9 @@ function [logZ, time, logAbsErrorBound] = compute_log_z_array(modelCellArray, ro
 		try
 			[logZ, logAbsErrorBound, time] = compute_log_z(Model, roundingPrecision);
 		catch err
-			warning('TT method didn''t succeed on the current model, proably out', ...
-					'of memory error. Model saved to the errors.mat file.');
+			warning(['TT method didn''t succeed on the current model. Model ', ...
+					'saved to the errors.mat file.']);
+			disp(err);
 			logZ = 0;
 			logAbsErrorBound = inf;
 			time = 0;
