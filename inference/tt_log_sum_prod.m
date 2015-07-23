@@ -1,7 +1,8 @@
 function [logSum, logAbsDiffBound] = tt_log_sum_prod(factorArray, roundingPrecision, varargin)
     % Find approximate log sum of elementwise product of tensors:
-    % tt_log_sum_prod(factorArray, roundingPrecision) ~= log(sum(factorArray{1} .* factorArray{2} .* ... .* factorArray{end}))
-    % 
+    % tt_log_sum_prod(factorArray, roundingPrecision) is an approximation to:
+    %   log(sum(factorArray{1} .* factorArray{2} .* ... .* factorArray{end}))
+    %
     % Optional arguments:
     %       o order  -- ['right_to_left'] in that order we would multiply vectors and matrices.
     %                                   Could be 'left_to_right' or 'right_to_left'.
@@ -10,7 +11,7 @@ function [logSum, logAbsDiffBound] = tt_log_sum_prod(factorArray, roundingPrecis
     %                                'exact' -- multiply exactly and then apply tt_rounding
     %                                'amen' -- use amen_mv method
     %       o verb   -- [1] verbosity level, 0-silent, 1-full info.
-    % 
+    %
 
     % Default values
     multiplicationOrder = 'right_to_left';
@@ -40,8 +41,8 @@ function [logSum, logAbsDiffBound] = tt_log_sum_prod(factorArray, roundingPrecis
 
                 isMvSpecified = true;
             case 'verb'
-                verboseLevel = varargin{i+1};        
-                
+                verboseLevel = varargin{i+1};
+
             otherwise
                 warning('Unrecognized option: %s\n',varargin{i});
         end
